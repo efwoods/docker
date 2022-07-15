@@ -12,6 +12,7 @@ services:
       test: ["CMD", "curl", "-f", "http://localhost:27017"]
       interval: 30s
       timeout: 10s
+      retries: 5
   app:
     container_name: app
     restart: always
@@ -21,5 +22,5 @@ services:
     ports:
       - "4000:4000"
     links:
-      - mongo  
+      - mongo 
 

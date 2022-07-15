@@ -45,6 +45,7 @@ Simple node and express docker
       test: ["CMD", "curl", "-f", "http://localhost:27017"]
       interval: 30s
       timeout: 10s
+      retries: 5
     ```
 - depends_on:
   - sets the dependent service to use with healthcheck
