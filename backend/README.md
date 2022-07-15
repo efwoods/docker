@@ -1,7 +1,7 @@
 # node-docker
 Simple node and express docker 
 
-## building an image
+## building an image & useful commands
 - `docker build -t eveng1neer/simple-backend .`
   - '-t' to name your image
   - 'build' to build the image
@@ -17,6 +17,8 @@ Simple node and express docker
   - push the name of the image to docker hub
 - `docker pull`
   - pull a docker image from the docker hub
+- `docker logs [container ID/name]`
+  - show the logs of the container
 
 ## docker compose
 [compose.yml](compose.yml)
@@ -28,7 +30,7 @@ Simple node and express docker
   - links to the mongo service
 - image
   - pulls the mongo image 
-  - (it is not in the dockerfile so it is pulled)
+  - (if it is not in the dockerfile then it is pulled through this declaration here)
 - volumes
   - persists data
   - syntax is (host:container)
@@ -41,3 +43,4 @@ mongoose.connect('mongodb://mongo:27017/crm');
 ```
   - connecting to the mongodb in index.js
   - "...://mongo:..." is the service name in docker compose
+  
