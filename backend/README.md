@@ -36,6 +36,19 @@ Simple node and express docker
   - syntax is (host:container)
 - ports:
   - mongodb default port is 27017
+- healthcheck
+  - will poll the port of the service to see if service is up 
+  - use in dependent service (aka mongo db)
+  - can use 'restart' under healthcheck to set the max number of times to check for health before declaring service/container unhealthy
+  ```
+  healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:27017"]
+      interval: 30s
+      timeout: 10s
+    ```
+- depends_on:
+  - sets the dependent service to use with healthcheck
+  - (e.g. set in app & depends on mongo)
 
 ### index.js
 ```
