@@ -17,3 +17,20 @@ Simple node and express docker
   - push the name of the image to docker hub
 - `docker pull`
   - pull a docker image from the docker hub
+
+## docker compose
+[compose.yml](compose.yml)
+- services
+  - list of services by name
+- app
+  - service defined as "app"
+- links
+  - links to the mongo service
+- image
+  - pulls the mongo image 
+  - (it is not in the dockerfile so it is pulled)
+- volumes
+  - persists data
+  - syntax is (host:container)
+- ports:
+  - mongodb default port is 27017
