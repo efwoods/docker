@@ -34,3 +34,10 @@ Simple node and express docker
   - syntax is (host:container)
 - ports:
   - mongodb default port is 27017
+
+### index.js
+```
+mongoose.connect('mongodb://mongo:27017/crm');
+```
+  - connecting to the mongodb in index.js
+  - "...://mongo:..." is the service name in docker compose
