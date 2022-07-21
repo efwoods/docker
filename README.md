@@ -1,6 +1,8 @@
 # Docker Topics
 A Repository dedicated to studying Docker.
- 
+
+```docker run -it -p 3000:3000 --rm ghcr.io/efwoods/docker:frontend```
+
  ## building an image & useful commands
 - `docker build -t eveng1neer/simple-backend .`
   - '-t' to name your image
