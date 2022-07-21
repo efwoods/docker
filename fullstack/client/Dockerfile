@@ -1,5 +1,7 @@
 FROM node:16
 
+LABEL org.opencontainers.image.source https://github.com/efwoods/docker
+
 WORKDIR /client
 
 COPY package*.json /client/

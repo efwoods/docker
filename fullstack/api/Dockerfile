@@ -12,7 +12,7 @@ COPY package*.json ./
 
 # install the dependencies in the project
 RUN npm install
-
+LABEL org.opencontainers.image.source https://github.com/efwoods/docker
 # copy the all the files from the local machine directory to the docker container
 COPY . .
 
